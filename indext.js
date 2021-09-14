@@ -8,7 +8,6 @@ const knex = require('knex')({
         database: 'sandy'
     }
 });
-// console.log('hello')
 // this knex qureie for inserting data in tha database 
 knex('students').insert({ id: 3, name: 'sudha', description: 'navgurukul' })
     .then((data) => {
@@ -31,7 +30,7 @@ knex.update({ id: 1, name: 'anchal', description: 'delhi' })
     }).catch((err) => {
         // console.log("not updatate")
     })
-knex('students').where('id').del()
+knex('students').where('id',1).del()
     .then((data) => {
         // console.log('deleted the data');
     }).catch((err) => {
